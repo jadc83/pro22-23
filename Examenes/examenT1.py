@@ -1,18 +1,20 @@
-
+"""asdasd"""
 def ahorcado (palabra):
+    """ahorcado"""
     fichero = open("ahorcado.txt", "r")
     linea = fichero.readline()
     fichero.close()
     lista = []
     if linea == palabra.upper():
-        return "Enhorabuena!"
+        print("¡Enhorabuena!")
     else:
         for x in linea.upper():
             if x in palabra.upper():
                 lista.append(x)
             else:
                 lista.append("_")
-    return "".join(lista)
+        lista = "".join(lista)
+        print(lista)
 
 from itertools import count
 unico = lambda sec, ac1, cont: set(ac1) if cont == len(sec) else \
