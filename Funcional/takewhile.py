@@ -4,10 +4,8 @@
         i
 """
         
-aux = lambda x, y: x < y
-
-tomar = lambda cond, sec, acu: sec if sec == () else \
-    tomar(cond, sec[1:], acu + (sec[0],)) if aux(sec[0], cond) else \
-        acu
-    
-tomar_mientras = lambda con, sec: tomar(con, sec, ())
+tomar_mientra = lambda funcion, tupla, acumulador: acumulador if tupla == () else \
+    tomar_mientra(funcion, tupla[1:], acumulador + (tupla[0],)) if funcion(tupla[0]) else \
+        acumulador
+        
+tomar_mientras = lambda funcion, tupla: tomar_mientra(funcion, tupla, ())
