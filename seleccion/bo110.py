@@ -21,7 +21,7 @@ original = input("Introduce una palabra: \n").lower()
 
 os.system("cls")
 
-indices = random.sample(range(0, len(original)), len(original))
+indices = random.sample(range(0, len(original)), len(original)) #sample(rango(a,b), longitud deseada)
 
 for x in indices:
     palabra.append(original[x])

@@ -10,9 +10,6 @@ e. El jugador B sólo tiene 7 intentos.
 f. La partida terminará al acertar todas las letras que forman la palabra secreta (gana
 el jugador B) o cuando se agoten todos los intentos (gana el jugador A).
 """
-from PIL import Image
-im = Image.open("ahorcado.png")
-
 import getpass
 adivina = getpass.getpass(prompt='Introduce la palabra: ', stream=None)
 guiones = ["_" for x in adivina]
@@ -33,5 +30,4 @@ while contador > 0:
             contador -= 1
             if contador < 1:
                 print("Gana el jugador A")
-                im.show()
         
