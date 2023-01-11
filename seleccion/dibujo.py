@@ -1,3 +1,4 @@
-print("O")
-print("/|\"")
-print("||")
+print(" V_V")
+print("('O')")
+print("/[]\\")
+print(" ||")

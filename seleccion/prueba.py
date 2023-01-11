@@ -1,4 +1,9 @@
-import getpass
-import os
-prueba = getpass.getpass(prompt='Password: ', stream=None)
-os.system("cls")
+archivo = open("bo119.txt", "r")
+
+contenido = "loquesea"
+
+while contenido != '':
+    for x in range(1,6):
+        contenido = archivo.readline()
+        print(contenido, end="")
+    input(">>>>>>>>>")
