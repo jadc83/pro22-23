@@ -5,7 +5,7 @@ Prz».
 """
 
 nombre = input("Introduce nombre:\n")
-vocales = [ "a", "A", "á", "Á", "e", "E", "é", "É", "i", "í", "I", "Í", "o", "ó", "Ó", "O", "u", "U", "ú", "Ú" ]
+vocales = [ "aAáÁeEéÉiíIÍoóÓOuUúÚ" ]
 res = []
 for x in nombre:
     if x not in vocales:

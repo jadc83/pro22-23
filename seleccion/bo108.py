@@ -19,13 +19,12 @@ c ∉ sec1 → codifica(sec1, sec2, c) = c
 sec1 = ["e", "i", "k", "m", "p", "q", "r", "s", "t", "u", "v"]
 sec2 = ["p", "v", "i", "u", "m", "t", "e", "r", "k", "q", "s"]
 resultado = []
+
 def codifica(sec1,sec2,c):
-    sec11 = list(enumerate(sec1,0))
-    sec22 = list(enumerate(sec2,0))
     if c in sec1:
         indice = sec1.index(c)
-        cc = sec22[indice]
-        return cc[1]
+        cc = sec2[indice]
+        return cc
     else:
         return c
 codificada = input("Inserta texto a codificar:\n")
