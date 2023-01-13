@@ -17,8 +17,6 @@ for nombre in nombres:
     fecha = nombre.find('alta')
     l1.append(fecha.text)
     l2.append(name.text)
-
 res = sorted(list(zip(l1,l2)))
-
 for x, y in res:
     print(x,y)
