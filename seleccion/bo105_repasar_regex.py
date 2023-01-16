@@ -12,14 +12,11 @@ de sus dialectos) y, en caso afirmativo, nos muestre sólo el mensaje sin muleti
 
 import re
 texto = input("Frase:\n")
-traduccion = texto.split("\t")
-for x in texto:
-    if re.findall("^pythonin", texto):
-        print(f"Es el dialecto 1 y quiere decir {traduccion[-1].strip()}")
-        break
-    elif re.findall("pythonen, nen, nen$", texto):
-        print(f"Es el dialecto 2 y quiere decir '{traduccion[0].strip()}'")
-        break
-    else:
-        print("No conozco ese dialecto")
-        break
+
+patron = re.findall('^Pythonin, pythonon', texto)
+
+if patron == []:
+    print("No esta")
+else:
+    
+    contenido = texto.split("     ")[1].strip()

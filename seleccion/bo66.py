@@ -9,12 +9,13 @@ def es_primo(n):
     for i in range(2, n):
         if n % i == 0:
             return False
-    return True
+    return n
 
 def divisores(numero):
     contador = 0
     for x in range(1,numero + 1):
         if numero % x == 0:
-            if es_primo(x):
-                contador += 1
-    print(f"El numero {numero} tiene {contador} divisores primos")
+           if es_primo(x):
+               contador += 1
+    return contador
+                          
