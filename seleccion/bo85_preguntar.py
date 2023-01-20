@@ -4,6 +4,9 @@ con los elementos de la lista original donde se han eliminado los datos repetido
 """
 
 def sin_repetidos(lista):
-    copia = set(lista)
-    copia = list(copia)
-    return copia
+    for x in lista:
+        valor = lista.count(x)
+        if valor > 1:
+            indice = lista.index(x)
+            lista.pop(indice)
+    print(lista)

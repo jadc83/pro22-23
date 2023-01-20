@@ -9,23 +9,17 @@ de la suerte
 """
 
 numeros = []
-
 while True:
     valor = int(input("Mete numero: \n"))
     if valor >= 0:
         numeros.append(valor)
     else:
         break
-
-numerosbak = numeros    
+numerosbak = numeros
 numeros = set(numeros)
-
 while len(numeros) != 1:
     aleatorio1 = numeros.pop()
     aleatorio2 = numeros.pop()
     numeros.add((aleatorio1 + aleatorio2) / 2)
-    
 resultado = list(numeros)
 print(int(resultado[0]))
-
-
