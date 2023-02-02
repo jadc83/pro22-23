@@ -3,28 +3,33 @@
     <socios>
         <socio id="1" estado="permanente">
             <nombre>Sherlock Holmes</nombre>
-            <direccion>Avda. de Huelva, s/n</direccion>
+            <direccion>Salto del grillo 61</direccion>
             <alta>1890-12-14</alta>
+            <altura>185</altura>
         </socio>
         <socio id="2">
             <nombre>Winston Churchill</nombre>
-            <direccion>Avda. de Huelva, s/n</direccion>
+            <direccion>Salto del grillo 61</direccion>
             <alta>0002-02-13</alta>
+            <altura>165</altura>
         </socio>
         <socio id="3" estado="Trabajando en TeleSanlucar">
-            <nombre>Marujita Diaz</nombre>
-            <direccion>Avda. de Huelva, s/n</direccion>
+            <nombre>Manuela Perron</nombre>
+            <direccion>Salto del grillo 61</direccion>
             <alta>1994-11-11</alta>
+            <altura>105</altura>
         </socio>
         <socio id="4">
-            <nombre>Juan Imedio</nombre>
-            <direccion>Avda. de Huelva, s/n</direccion>
+            <nombre>John McAfee</nombre>
+            <direccion>Salto del grillo 61</direccion>
             <alta>1969-07-13</alta>
+            <altura>193</altura>
         </socio>
         <socio id="5">
-            <nombre>Popoki Gruten</nombre>
-            <direccion>Avda. de Huelva, s/n</direccion>
+            <nombre>Juanito el palomitero</nombre>
+            <direccion>Salto del grillo 61</direccion>
             <alta>1942-02-13</alta>
+            <altura>113</altura>
         </socio>
     </socios>
 </club>

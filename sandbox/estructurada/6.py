@@ -1,11 +1,16 @@
 """
-Escribir una función pasa_pasa() que manipule dos números enteros suprimiendo la última cifra del primero y añadiéndola al final del segundo.
+Escribir una función pasa_pasa() que manipule dos números enteros 
+suprimiendo la última cifra del primero y añadiéndola al final del segundo.
 
-Usando esa función, escribir la función invierte() que invierte un número (partiendo del propio número y de otro con valor inicial cero) a base de repetir la operación pasa_pasa() cuantas veces sea necesario.
+Usando esa función, escribir la función invierte() que invierte un número 
+(partiendo del propio número y de otro con valor inicial cero) a base de 
+repetir la operación pasa_pasa() cuantas veces sea necesario.
 
-Ambas funciones deben recibir como argumento una lista llamada numeros con los dos números sobre los que operan y deben cambiar dicha lista.
+Ambas funciones deben recibir como argumento una lista llamada numeros con 
+los dos números sobre los que operan y deben cambiar dicha lista.
 
-Además, la función invierte() debe mostrar cada paso del proceso, de la siguiente manera:
+Además, la función invierte() debe mostrar cada paso del proceso, 
+de la siguiente manera:
 
 [12345, 0]
 [1234, 5]

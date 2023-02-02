@@ -6,7 +6,7 @@ mismo archivo.
 import xml.etree.ElementTree as ET
 arbol = ET.parse('bo121.xml')
 raiz = arbol.getroot()
+for c in raiz.findall('./socios/socio'):
+    print(c.get("estado", "Sin estado"))
 for x in raiz.findall('./socios/socio/direccion'):
-    x.text = "Avda. de Huelva, s/n"
-
-arbol.write("ejemplo.xml")
+    print(x.text)

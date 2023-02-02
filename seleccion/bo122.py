@@ -7,7 +7,6 @@ import xml.etree.ElementTree as ET
 arbol = ET.parse('bo121.xml')
 raiz = arbol.getroot()
 contador = 0
-for x in raiz.findall('./socios/socio/direccion'):
-    direccion = x.text
-    print(direccion)
+for x in raiz.findall('./socios/socio'):
+    contador += 1
 print(contador) 

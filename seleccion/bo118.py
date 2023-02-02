@@ -4,7 +4,7 @@ por un determinado lugar. Escribir un programa que permita mostrar el libro de f
 e insertar un nuevo nombre (comprobando que no se encuentre repetido). El archivo se
 deberá llamar firmas.txt.
 """
-import os
+
 contenido = []
 while True:
     print("[LIBRO ELECTRONICO DE FIRMAS]")

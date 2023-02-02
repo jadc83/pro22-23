@@ -10,3 +10,5 @@ while archivo.readline() != '':
     for x in range(0,6):
         print(archivo.readline())
     input("More")
+
+archivo.close()

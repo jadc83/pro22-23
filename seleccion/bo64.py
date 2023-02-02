@@ -5,3 +5,5 @@ pasa como argumento corresponde a una vocal.
 
 def esvocal(letra):
     print(letra.lower() in "aáeéiíoóuú")
+    
+CONSTANTE = "pitufo"
