@@ -38,5 +38,5 @@ def eleva(val1, val2):
 def raiz(val):
     """Devuelve la raiz cuadrada de val1"""
     try: return sqrt(val)
-    except ValueError:return "La raiz de un numero negativo no tiene solucion real."
+    except ValueError: return "La raiz de un numero negativo no tiene solucion real."
     except TypeError: return "No se puede hacer la raiz cuadrada a una letra"
