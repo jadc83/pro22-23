@@ -24,6 +24,7 @@ def divide(val1, val2):
     
     
 def eleva(val1, val2):
+    """Devuelve val1 elevado a val2"""
     if val2 == 0:
         return 1
     elif val2 < 0:
