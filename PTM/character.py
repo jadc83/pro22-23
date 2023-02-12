@@ -1,6 +1,8 @@
+from dado import dados
 class personaje:
     
     def __init__(self, nombre, fuerza, constitucion, tamaño, destreza, apariencia, inteligencia, educacion, poder):
+        """Metodo constructor."""
         self.nombre = nombre
         self.FUE = fuerza
         self.CON = constitucion
@@ -15,6 +17,7 @@ class personaje:
         self.MP = self.POD
 
     def atributos(self):
+        """Muestra los atributos"""
         print(".Nombre:", self.nombre)
         print(".FUE:", self.FUE)
         print(".CON:", self.CON)
@@ -26,20 +29,39 @@ class personaje:
         print(".POD:", self.POD)
         print(".SUE", self.SUE)
         print(".HP", self.HP)
+        print(".MP", self.MP)
         
-    def esta_vivo(self):
-        return self.HP > 0
-     
-        
-    def ataque(self, enemigo):
-        enemigo.HP = enemigo.HP - ( self.FUE / 2 )
-        if enemigo.HP > 1:
-            print(enemigo.nombre,"recibe la ostia", "Vida restante:", enemigo.HP)
-        else:
-            print( enemigo.nombre, "ha muerto.")
-            print(chr(27)+"[1;31m"+"Fatality") 
-            print(chr(27)+"[1;31m"+"Flawless Victory.") 
-            
+######METODOS DE PERSONAJE VAN AQUI#############
             
 
-       
+class investigador(personaje):
+    
+    def __init__(self, nombre, fuerza, constitucion, tamaño, destreza, apariencia, inteligencia, educacion, poder, revolver, navaja):
+        super().__init__(nombre, fuerza, constitucion, tamaño, destreza, apariencia, inteligencia, educacion, poder)
+        self.revolver = revolver
+        self.navaja = navaja
+        
+########METODOS DE INVESTIGADOR VAN AQUI#############
+    
+    def atributos(self):
+        super().atributos()
+        print(".Revolver", self.revolver)
+        print(".Navaja", self.navaja)
+
+class policia(personaje):
+    
+    def __init__(self, nombre, fuerza, constitucion, tamaño, destreza, apariencia, inteligencia, educacion, poder, revolver, porra):
+        super().__init__(nombre, fuerza, constitucion, tamaño, destreza, apariencia, inteligencia, educacion, poder)
+        self.revolver = revolver
+        self.porra = porra
+        
+########METODOS DE POLICIA VAN AQUI#############
+    
+    def atributos(self):
+        super().atributos()
+        print(".Revolver", self.revolver)
+        print(".porra", self.porra)
+        
+anna = personaje("Anna Williams", dados(3), dados(3), dados(3), dados(3), dados(3), dados(3), dados(3), dados(3))
+sebastian = policia("Sebastian Martinez", dados(3), dados(3), dados(3), dados(3), dados(3), dados(3), dados(3), dados(3), 12, 4)
+john = investigador("John Williams", dados(3), dados(3), dados(3), dados(3), dados(3), dados(3), dados(3), dados(3), 10, 6)
