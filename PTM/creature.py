@@ -37,4 +37,4 @@ class primigenio(criatura):
     def atributos(self):    
         super().atributos()
         
-cthulhu = primigenio("Cthulhu", dados(24), dados(50), dados(50), dados(19), dados(55), dados(600))
+cthulhu = primigenio("Cthulhu", dados(24,6), dados(50,6), dados(50,6), dados(19,6), dados(55,6), dados(600,6))

@@ -1,17 +1,9 @@
 import random
 
 
-def dados(tiradas):
+def dados(tiradas, caras):
     total = 0
     for x in range(1,tiradas):
-        num = random.randint(1,6)
+        num = random.randint(1,caras)
         total += num
     return total
-
-
-def prueba():
-    "Esta funcion testea la suma de las tiradas"
-    num = 0
-    while num != 18:
-        num = dados(3)
-        print(num)
