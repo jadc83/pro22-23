@@ -1,5 +1,4 @@
 def racional(a, b):
-    numerador, denominador = a, b
     return [a, b]
 
 def numer(lista):
@@ -21,4 +20,15 @@ def iguales(a, b):
 
 def imprimir(a):
     print(numer(a), '/', denom(a), sep='')
+    
+def combo(a, b):
+    def get(indice):
+        if indice == 0:
+            return a
+        elif indice == 1:
+            return b
+    return get
+
+def select (p, i):
+    return p(i)
 
