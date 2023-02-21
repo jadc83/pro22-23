@@ -11,6 +11,7 @@
 #print(resultado)
 password1 = ""
 password2 = "admin"
+
 def credenciales(*credenciales):
     global password1
     password1 += credenciales[1]
@@ -29,10 +30,10 @@ def credenciales(*credenciales):
         return separar
             
     if len(credenciales) == 3:
+        
         def separar(indice):
             nombre = credenciales[0]
             userpwd = credenciales[1]
-            adminpwd = credenciales[2]
             if credenciales[2] == password2:
                 if indice == 0:
                     return nombre
@@ -40,10 +41,18 @@ def credenciales(*credenciales):
                     return userpwd
                 elif indice == 2:
                     return "No es posible consultar el password."
+        def passbak(contraseña):
+            global password1,password2
+            if contraseña == password2:
+                password1 = credenciales[1]
+        
+        passbak(credenciales[2])
+        
         return separar
     print(password1)
+    
 
-separar = credenciales("jose","12345")
+separar = credenciales("jose","12345", "admin")
 
 
 

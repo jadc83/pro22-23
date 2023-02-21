@@ -24,7 +24,6 @@ def imprimir(a):
     print(numer(a), '/', denom(a), sep='')
     
 def combo(a,b):
-    maestra = "jalapeño"
     def ninja(indice):
         if indice == 0:
             return a
@@ -34,6 +33,3 @@ def combo(a,b):
 
 def select (p, i):
     return p(i)
-
-def prueba():
-    return len(sys.argv)
