@@ -1,3 +1,5 @@
+import sys
+
 def racional(a, b):
     return [a, b]
 
@@ -21,14 +23,17 @@ def iguales(a, b):
 def imprimir(a):
     print(numer(a), '/', denom(a), sep='')
     
-def combo(a, b):
-    def get(indice):
+def combo(a,b):
+    maestra = "jalapeño"
+    def ninja(indice):
         if indice == 0:
             return a
         elif indice == 1:
-            return b
-    return get
+                return b
+    return ninja
 
 def select (p, i):
     return p(i)
 
+def prueba():
+    return len(sys.argv)

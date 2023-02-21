@@ -1,33 +1,26 @@
-from math import sqrt
+def pareja(*args):
+    if len(args) == 2:        
+        def get(indice):
+            a = args[0]
+            if indice == 0:
+                return a
+            else:
+                return "La contraseña es privada"
+    elif len(args) == 3:
+        def get(indice):
+            a, b, c = args[0], args[1], args[2]
+            if indice == 0:
+                return a
+            elif indice == 1:
+                if c == "admin":
+                    return b
+            else:
+                return "Indice incorrecto."            
+    else:
+        def get(indice):
+            return "Numero de parametros incorrecto"
 
-try:
-    def suma(val1, val2):
-        """Devuelve la suma de val1 y val2"""
-        return val1 + val2
+    return get
 
-
-    def resta(val1, val2):
-        """Devuelve la resta de val1 y val2"""
-        return val1 - val2
-
-
-    def multiplica(val1, val2):
-        """Devuelve el producto de val1 y val2"""
-        return val1 * val2
-    def divide(val1, val2):
-        """Devuelve la division de val1 entre val2"""
-        return val1 / val2
-
-    def eleva(val1, val2):
-        """Devuelve val1 elevado a val2"""
-        if val2 == 0:
-            return 1
-        elif val2 < 0:
-            return (1 / (-( val1 * val2)))
-        else:
-            return val1 ** val2
-    def raiz(val):
-        """Devuelve la raiz cuadrada de val1"""
-        return sqrt(val)
-except TypeError:
-        print("Error")
+def select (funcion, indice):
+        return funcion(indice)
