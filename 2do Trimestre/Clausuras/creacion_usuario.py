@@ -17,7 +17,7 @@ def listar_usuarios():
 
 def cambiar_pass(usuario, password, nuevo):
     if password == __usuarios[usuario]:
-        print("Password ")
+        print("Password actualizado.")
         return createuser(usuario,nuevo)
     else:
         return "Password incorrecto."
