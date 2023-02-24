@@ -1,3 +1,5 @@
+
+
 def gestion_usuario():
     """Esta funcion contiene un diccionario '__usuarios' que contiene la
     informacion de los usuarios y a las funciones, 'genera()', 'crear_usuario()'
@@ -6,7 +8,7 @@ def gestion_usuario():
     listar_usuarios y cambiar_pass"""
     
     __usuarios = dict()
-    
+      
     def genera(nombre, password):
         """Esta funcion usa a su vez la funcion 'createuser' del 
         modulo 'creacion_usuario.py' para su funcionamiento."""
@@ -21,11 +23,11 @@ def gestion_usuario():
         y lo agrega a la lista de usuarios"""
         
         user = genera(nombre, password)
-        if user() not in __usuarios:
-            __usuarios.update(user())
-            print("Usuario creado con exito.")
+        if nombre in __usuarios:
+            print("El usuario ya existe en el sistema.")
         else:
-            print("El usuario ya existe.")
+            __usuarios.update(user())
+        
         
     def listar_usuarios():
         """Lista los usuarios existentes en el sistema."""
@@ -38,13 +40,15 @@ def gestion_usuario():
     
     def cambiar_pass(usuario, password, nuevo):
         """Cambia la contraseña de un usuario, es necesario el password"""
+        try:
+            if password == __usuarios[usuario]:
+                __usuarios[usuario] = nuevo
+                print("Password actualizado.")
+            else:
+                return "Password incorrecto."
+        except KeyError:
+            print("Usuario no encontrado.")
         
-        if password == __usuarios[usuario]:
-            __usuarios[usuario] = nuevo
-            print("Password actualizado.")
-        else:
-            return "Password incorrecto." 
-
     return genera, crear_usuario, listar_usuarios, cambiar_pass
 
 genera, crea_usuario, listar, cambiar_pass = gestion_usuario()
